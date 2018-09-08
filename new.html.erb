@@ -1,0 +1,17 @@
+<h1>회원 가입</h1>
+
+<%= form_with scope: :input, url: simplelogins_path, local: true do |form| %>
+  <p>
+    &nbsp;ID :
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    PW :
+    <%= form.password_field :userpw %>
+  </p>
+
+  <p>
+    &nbsp;<%= form.submit(value='가입 하기') %> &nbsp; <%= link_to '로그인 화면으로', simplelogins_path %>
+  </p>
+<% end %>
